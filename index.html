@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>GBK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+<div class="game">
+  <h1>✊✌️✋</h1>
+  <p class="subtitle">Ropasci</p>
+
+  <!-- MODE SELECT -->
+  <div class="mode">
+    <button class="mode-btn active" onclick="setMode('pve')">🤖 VS Computer</button>
+    <button class="mode-btn" onclick="setMode('pvp')">👥 VS Player</button>
+  </div>
+
+  <!-- NAMES -->
+  <input id="p1Name" placeholder="Nama Player 1">
+  <input id="p2Name" placeholder="Nama Player 2 / Computer">
+
+  <p id="turn">Giliran: Player 1</p>
+
+  <!-- CHOICES -->
+  <div class="choices">
+    <button onclick="pick('batu')">✊</button>
+    <button onclick="pick('gunting')">✌️</button>
+    <button onclick="pick('kertas')">✋</button>
+  </div>
+
+  <button class="run" onclick="runGame()">JALANKAN</button>
+
+  <p id="result">Pilih dulu boss</p>
+
+  <!-- SCORE -->
+  <div class="score">
+    <p><span id="n1">P1</span>: <span id="s1">0</span></p>
+    <p><span id="n2">P2</span>: <span id="s2">0</span></p>
+  </div>
+
+  <p id="round">Round: 0 / 5</p>
+
+  <button class="dark" onclick="toggleDark()">🌙 Dark Mode</button>
+  <button class="reset" onclick="resetGame()">🔄 Reset Game</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-card">
+    <h2 id="popupText"></h2>
+    <canvas id="confetti"></canvas>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
