@@ -1,0 +1,2 @@
+# Ropasci
+BatuGuntingKertas
